@@ -16,7 +16,7 @@ public class log extends JFrame implements ActionListener {
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(5, 5, 5, 5);
 
-        // Adding "QUIZ MASTER" heading with 3D effect and shadow
+
         JLabel heading = new JLabel("QUIZ MASTER") {
             @Override
             protected void paintComponent(Graphics g) {
@@ -95,7 +95,6 @@ public class log extends JFrame implements ActionListener {
             char[] password = passwordField.getPassword();
             String enteredPassword = new String(password); 
 
-            // Check the password before login
             if (validatePassword(enteredPassword)) {
                 setVisible(false);
                 new Rules(name);
@@ -107,7 +106,6 @@ public class log extends JFrame implements ActionListener {
         }
     }
 
-    // A simple method to validate the entered password
     private boolean validatePassword(String enteredPassword) {
         String correctPassword = "12345"; // Change this to your correct password
         return enteredPassword.equals(correctPassword);
