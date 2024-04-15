@@ -16,7 +16,7 @@ public class Score extends JFrame implements ActionListener {
         image.setBounds(0, 200, 300, 250);
         add(image);
 
-        JLabel heading = new JLabel("Thankyou " + name + " for playing Simple Minds");
+        JLabel heading = new JLabel("Thankyou " + name );
         heading.setBounds(45, 30, 700, 30);
         heading.setFont(new Font("Tahoma", Font.PLAIN, 26));
         add(heading);
@@ -38,7 +38,7 @@ public class Score extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent ae) {
         setVisible(false);
-        new Login();
+        new log();
     }
 
     public static void main(String[] args) {
