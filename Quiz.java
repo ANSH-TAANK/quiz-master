@@ -12,7 +12,7 @@ public class Quiz extends JFrame implements ActionListener {
     ButtonGroup groupoptions;
     JButton next, submit, lifeline;
 
-    public static int timer = 15;
+    public static int timer = 120;
     public static int ans_given = 0;
     public static int count = 0;
     public static int score = 0;
@@ -25,7 +25,7 @@ public class Quiz extends JFrame implements ActionListener {
         getContentPane().setBackground(Color.WHITE);
         setLayout(null);
 
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("2.jpg"));
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("QUIZ MASTER.png"));
         JLabel image = new JLabel(i1);
         image.setBounds(0, 0, 1440, 392);
         add(image);
@@ -143,7 +143,7 @@ public class Quiz extends JFrame implements ActionListener {
 
         next = new JButton("Next");
         next.setBounds(1100, 550, 200, 40);
-        next.setFont(new Font("Tahoma", Font.PLAIN, 22));
+        next.setFont(new Font("Tahoma", Font.PLAIN, 30));
         next.setBackground(new Color(30, 144, 255));
         next.setForeground(Color.WHITE);
         next.addActionListener(this);
@@ -151,7 +151,7 @@ public class Quiz extends JFrame implements ActionListener {
 
         lifeline = new JButton("50-50 Lifeline");
         lifeline.setBounds(1100, 630, 200, 40);
-        lifeline.setFont(new Font("Tahoma", Font.PLAIN, 22));
+        lifeline.setFont(new Font("Tahoma", Font.PLAIN, 30));
         lifeline.setBackground(new Color(30, 144, 255));
         lifeline.setForeground(Color.WHITE);
         lifeline.addActionListener(this);
@@ -159,7 +159,7 @@ public class Quiz extends JFrame implements ActionListener {
 
         submit = new JButton("Submit");
         submit.setBounds(1100, 710, 200, 40);
-        submit.setFont(new Font("Tahoma", Font.PLAIN, 22));
+        submit.setFont(new Font("Tahoma", Font.PLAIN, 30));
         submit.setBackground(new Color(30, 144, 255));
         submit.setForeground(Color.WHITE);
         submit.addActionListener(this);
@@ -246,9 +246,9 @@ public class Quiz extends JFrame implements ActionListener {
 
         if (ans_given == 1) {
             ans_given = 0;
-            timer = 15;
+            timer = 120;
         } else if (timer < 0) {
-            timer = 15;
+            timer = 120;
             opt1.setEnabled(true);
             opt2.setEnabled(true);
             opt3.setEnabled(true);
